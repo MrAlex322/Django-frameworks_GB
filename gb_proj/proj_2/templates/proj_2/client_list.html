@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client List</title>
+</head>
+<body>
+    <h1>Client List</h1>
+    <ul>
+        {% for client in clients %}
+            <li><a href="{% url 'client_detail' client.pk %}">{{ client.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'client_create' %}">Add New Client</a>
+</body>
+</html>
